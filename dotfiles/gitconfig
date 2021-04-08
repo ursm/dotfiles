@@ -2,18 +2,11 @@
 	br = branch
 	ca = commit -v --amend
 	ci = commit -v
-	co = checkout
 	ds = diff --staged
 	lg = log --oneline --decorate --graph
 	lp = log -p --stat
 	pr = pull --rebase --prune
 	st = status -sb
-	svd = svn dcommit
-	svf = svn fetch
-	svr = svn rebase
-	serve = daemon --export-all --base-path=. --base-path-relaxed
-	in  = !sh -c 'git log ..origin/${1:-master}'
-	out = !sh -c 'git log origin/${1:-master}..' -
 [color]
 	ui = auto
 [user]
@@ -29,10 +22,6 @@
 	account = ursm
 [ghq]
 	root = ~/src
-[pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -44,3 +33,11 @@
 [rebase]
 	autostash = true
 	autosquash = true
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[core]
+	pager = delta --diff-highlight
+[interactive]
+	diffFilter = delta --color-only --diff-highlight

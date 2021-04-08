@@ -28,8 +28,10 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}("
 
 export PATH=$HOME/bin:$HOME/go/bin:$HOME/.yarn/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH:$HOME/.heroku/bin
 
-export GO111MODULE=on
+
+export GO111MODULES=on
 export GOPATH=$HOME/go:$HOME
+export PGUSER=postgres
 export RUBY_CFLAGS='-O3 -pipe -march=native'
 export RUBY_MAKE_OPTS='-j4 -l4'
 export UNZIP='-O cp932'
@@ -49,8 +51,15 @@ alias dc='docker-compose'
 alias g='git'
 alias open='xdg-open'
 alias pwgen='pwgen --secure --num-passwords=1'
-#alias vim='code'
 alias yr='yarn run'
+
+function ember() {
+  if [ -f yarn.lock ]; then
+    yarn run ember $@
+  else
+    npx ember $@
+  fi
+}
 
 bindkey '^g' anyframe-widget-cd-ghq-repository
 bindkey '^r' history-incremental-search-backward

@@ -11,5 +11,6 @@
 .node-version
 .ruby-version
 .tool-versions
+.vscode/
 npm-debug.log
 yarn-error.log

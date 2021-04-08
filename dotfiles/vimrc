@@ -6,17 +6,19 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'adelarsq/vim-matchit'
 Plug 'airblade/vim-gitgutter'
 Plug 'csexton/trailertrash.vim'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'docunext/closetag.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
+Plug 'joker1007/vim-ruby-heredoc-syntax'
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-user'
-Plug 'luochen1990/rainbow'
 Plug 'machakann/vim-swap'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'qpkorr/vim-bufkill'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -29,16 +31,16 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
-set fileencodings=ucs-bom,utf-8,utf-16,utf-16le,cp932,eucjp,iso2022jp
-set fileformats=unix,dos,mac
-
 set background=dark
 set breakindent
 set cursorline
+set directory-=.
+set expandtab
 set hidden
 set lazyredraw
 set list
@@ -46,8 +48,8 @@ set matchtime=1
 set modeline
 set number
 set showmatch
-set termguicolors
 set tabstop=4
+set termguicolors
 set virtualedit=block
 set wildmode=list:longest,list:full
 
@@ -56,13 +58,10 @@ if executable('rg')
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
 let g:go_fmt_command = 'goimports'
 let g:gruvbox_italic = 1
-let g:netrw_altv = 1
 let g:netrw_liststyle = 3
+let g:table_mode_corner = '|'
 
 let g:terminal_ansi_colors = [
   \ '#073642',
@@ -86,9 +85,11 @@ let g:terminal_ansi_colors = [
 let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-ember',
+  \ 'coc-eslint',
   \ 'coc-html',
   \ 'coc-json',
   \ 'coc-solargraph',
+  \ 'coc-stylelint',
   \ 'coc-tsserver',
   \ 'coc-yaml',
   \ ]
@@ -96,6 +97,9 @@ let g:coc_global_extensions = [
 colorscheme gruvbox
 
 cmap <C-x> <C-r>=expand('%:p:h')<CR>/
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 augroup vimrc
   autocmd!
