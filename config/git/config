@@ -1,0 +1,48 @@
+[alias]
+	br = branch
+	ca = commit --amend
+	ci = commit
+	ds = diff --staged
+	lg = log --oneline --decorate --graph
+	lp = log -p --stat
+	pr = pull --rebase --prune
+	st = status -sb
+[color]
+	ui = auto
+[commit]
+	verbose = true
+	gpgsign = 1
+[core]
+	pager = delta --diff-highlight
+[credential]
+	helper = libsecret
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[ghq]
+	root = ~/Repositories
+[github]
+	user = ursm
+[gpg]
+	program = gpg2
+[heroku]
+	account = ursm
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only --diff-highlight
+[log]
+	date = iso
+[pull]
+	rebase = true
+[push]
+	default = tracking
+	followTags = true
+[rebase]
+	autostash = true
+	autosquash = true
+[user]
+	name = Keita Urashima
+	email = ursm@ursm.jp
+	signingkey = 360E323EB0CBCC6E33D8BEEB6A6A5D90F612A885

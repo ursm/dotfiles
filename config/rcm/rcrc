@@ -1,0 +1,3 @@
+DOTFILES_DIRS="$HOME/Repositories/github.com/ursm/dotfiles"
+SYMLINK_DIRS="config/nvim/conf.d config/zsh/rc.d"
+EXCLUDES="bootstrap.sh"

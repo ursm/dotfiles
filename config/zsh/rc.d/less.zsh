@@ -1,0 +1,2 @@
+export LESS="$LESS --RAW-CONTROL-CHARS"
+export LESSHISTFILE=$XDG_CACHE_HOME/less/history

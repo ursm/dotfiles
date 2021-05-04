@@ -1,4 +1,0 @@
-Include local_config
-
-ForwardAgent yes
-ServerAliveInterval 60

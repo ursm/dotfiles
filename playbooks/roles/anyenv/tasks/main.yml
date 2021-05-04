@@ -1,3 +1,0 @@
-- git: repo=https://github.com/riywo/anyenv.git dest={{ansible_env.HOME}}/.anyenv
-- file: path={{ansible_env.HOME}}/.anyenv/plugins state=directory
-- git: repo=https://github.com/znz/anyenv-update.git dest={{ansible_env.HOME}}/.anyenv/plugins/anyenv-update

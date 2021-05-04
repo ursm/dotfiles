@@ -1,1 +1,0 @@
-- copy: src=tcp_fastopen.conf dest=/etc/sysctl.d/

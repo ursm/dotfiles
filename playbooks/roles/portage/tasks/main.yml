@@ -1,2 +1,0 @@
-- file: dest=/etc/portage/repos.conf state=directory
-- copy: src=gentoo.conf dest=/etc/portage/repos.conf/ mode=0644

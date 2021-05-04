@@ -1,0 +1,35 @@
+call plug#begin()
+
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'adelarsq/vim-matchit'
+Plug 'csexton/trailertrash.vim'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'docunext/closetag.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'joker1007/vim-ruby-heredoc-syntax'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/gv.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-user'
+Plug 'machakann/vim-highlightedyank'
+Plug 'machakann/vim-sandwich'
+Plug 'machakann/vim-swap'
+Plug 'morhetz/gruvbox'
+Plug 'neovim/nvim-lspconfig'
+Plug 'rhysd/git-messenger.vim'
+Plug 'rhysd/vim-textobj-ruby'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-vinegar'
+Plug 'vim-airline/vim-airline'
+
+call plug#end()
+
+runtime! conf.d/*.vim

@@ -1,0 +1,6 @@
+.cache/
+.git/
+.npm/
+.solargraph/
+node_modules/
+tmp/
