@@ -1,5 +1,6 @@
 bash-language-server
 dockerfile-language-server-nodejs
+heroku
 stylelint-lsp
 typescript
 typescript-language-server
