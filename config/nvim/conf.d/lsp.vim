@@ -62,7 +62,7 @@ local servers = {
   "html",
   "jsonls",
   "rust_analyzer",
-  "solargraph",
+  -- "solargraph",
   "stylelint_lsp",
   "tsserver",
   "vimls",

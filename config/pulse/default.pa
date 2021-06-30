@@ -1,0 +1,15 @@
+# vim: syntax=conf
+
+.include /etc/pulse/default.pa
+
+# https://wiki.archlinux.org/title/PulseAudio#Microphone_echo/noise_cancellation
+load-module module-echo-cancel use_master_format=1 aec_method=webrtc aec_args="analog_gain_control=0\ digital_gain_control=1" source_name=ec_source sink_name=ec_sink
+set-default-source ec_source
+set-default-sink ec_sink
+
+# https://github.com/werman/noise-suppression-for-voice
+# load-module module-null-sink sink_name=mic_denoised_out rate=48000
+# load-module module-ladspa-sink sink_name=mic_raw_in sink_master=mic_denoised_out label=noise_suppressor_stereo plugin=/usr/lib64/ladspa/librnnoise_ladspa.so control=50
+# load-module module-loopback source=alsa_input.usb-046d_Logitech_StreamCam_35475725-02.analog-stereo sink=mic_raw_in channels=2 source_dont_move=true sink_dont_move=true
+# load-module module-remap-source source_name=denoised master=mic_denoised_out.monitor channels=2
+# set-default-source mic_denoised_out.monitor

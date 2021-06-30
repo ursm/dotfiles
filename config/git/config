@@ -12,8 +12,6 @@
 [commit]
 	verbose = true
 	gpgsign = 1
-[core]
-	pager = delta --diff-highlight
 [credential]
 	helper = libsecret
 [filter "lfs"]
@@ -30,8 +28,6 @@
 	account = ursm
 [init]
 	defaultBranch = main
-[interactive]
-	diffFilter = delta --color-only --diff-highlight
 [log]
 	date = iso
 [pull]
