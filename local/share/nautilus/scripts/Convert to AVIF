@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -eu
+
+echo "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" | while read fpath; do
+  if [[ -d "$fpath" ]]; then
+    tmpdir=$(mktemp --directory --suffix=-nautilus-scripts-convert-to-avif)
+
+    pushd "$fpath"
+    find . -regextype posix-extended -iregex '.*\.(png|jpe?g)' -printf '%P\n' | parallel --bar "(echo {}; echo >&2; avifenc {} $tmpdir/{/.}.avif)" 2> >(zenity --title='Convert to AVIF' --width=550 --progress --auto-close --auto-kill)
+    popd
+
+    # fd --glob '*.{png,jpe?g}' "$fpath" | parallel --bar "(echo {}; echo >&2; avifenc '{}' '$tmpdir/{/.}.avif')" 2> >(zenity --title='Convert to AVIF' --width=550 --progress --auto-close --auto-kill)
+
+    size_before=$(du -sh "$fpath" | cut -f1)
+    size_after=$(du -sh "$tmpdir" | cut -f1)
+
+    mv "$fpath" "$fpath.orig"
+    mv "$tmpdir" "$fpath"
+
+    zenity --notification --text="\"${fpath##*/}\" is converted ($size_before → $size_after)"
+  else
+    avifenc --jobs all "$fpath" "${fpath%.*}.avif"
+  fi
+done

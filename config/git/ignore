@@ -4,6 +4,7 @@
 .DS_Store
 ._*
 .byebug_history
+.env
 .envrc
 .gradle
 .netlify/

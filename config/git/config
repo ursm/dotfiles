@@ -2,11 +2,12 @@
 	br = branch
 	ca = commit --amend
 	ci = commit
+	cp = cherry-pick
 	ds = diff --staged
 	lg = log --oneline --decorate --graph
 	lp = log -p --stat
 	pr = pull --rebase --prune
-	st = status -sb
+	st = status --short --branch
 [color]
 	ui = auto
 [commit]
@@ -34,7 +35,6 @@
 	rebase = true
 [push]
 	default = tracking
-	followTags = true
 [rebase]
 	autostash = true
 	autosquash = true
@@ -42,3 +42,10 @@
 	name = Keita Urashima
 	email = ursm@ursm.jp
 	signingkey = 360E323EB0CBCC6E33D8BEEB6A6A5D90F612A885
+[maintenance]
+	repo = /home/ursm/.local/share/znap/anyframe
+	repo = /home/ursm/.local/share/znap/asdf
+	repo = /home/ursm/.local/share/znap/ohmyzsh
+	repo = /home/ursm/.local/share/znap/zsh-completions
+	repo = /home/ursm/.local/share/znap/zsh-snap
+	repo = /home/ursm/.local/share/znap/zsh-syntax-highlighting
