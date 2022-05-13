@@ -1,12 +1,2 @@
-bash-language-server
-dockerfile-language-server-nodejs
 heroku
-stylelint-lsp
-typescript
-typescript-language-server
-vim-language-server
-vscode-css-languageserver-bin
-vscode-html-languageserver-bin
-vscode-json-languageserver
-yaml-language-server
 yarn

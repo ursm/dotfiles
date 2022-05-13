@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for f in $(fd config.ru $(git config --get ghq.root)); do
+  root=$(dirname $(realpath $f))
+
+  fd log             --extension log --changed-before 1d --no-ignore $root --exec-batch rm
+  fd tmp/screenshots --extension png --changed-before 1d --no-ignore $root --exec-batch rm
+done

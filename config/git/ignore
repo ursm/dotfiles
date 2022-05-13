@@ -3,15 +3,11 @@
 *~
 .DS_Store
 ._*
-.byebug_history
 .env
 .envrc
 .gradle
 .netlify/
 .netrwhist
-.node-version
-.ruby-version
-.tool-versions
 .vscode/
 npm-debug.log
 yarn-error.log
