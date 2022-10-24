@@ -1,0 +1,35 @@
+shell = 'zsh'
+
+[plugins]
+
+[plugins.ohmyzsh]
+github = 'ohmyzsh/ohmyzsh'
+use = ['lib/{git,history,termsupport,theme-and-appearance}.zsh', 'themes/gentoo.zsh-theme']
+
+[plugins.zsh-completions]
+github = 'zsh-users/zsh-completions'
+
+[plugins.zsh-syntax-highlighting]
+github = 'zsh-users/zsh-syntax-highlighting'
+
+[plugins.zsh-abbr]
+github = 'olets/zsh-abbr'
+
+[plugins.anyframe]
+github = 'mollifier/anyframe'
+
+[plugins.fzf]
+local = '/usr/share/fzf'
+use = ['key-bindings.zsh']
+
+[plugins.asdf]
+local = '~/.local/share/asdf/core'
+
+[plugins._asdf]
+local = '~/.local/share/asdf/core'
+dir = 'completions'
+apply = ['fpath']
+
+[plugins._heroku]
+local = '~/.cache/heroku'
+use = ['autocomplete/zsh_setup']

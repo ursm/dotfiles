@@ -5,9 +5,13 @@
 ._*
 .env
 .envrc
+.foreman
 .gradle
 .netlify/
 .netrwhist
+.node-version
+.ruby-version
+.tool-versions
 .vscode/
 npm-debug.log
 yarn-error.log

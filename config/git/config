@@ -4,11 +4,10 @@
 	ci = commit
 	cp = cherry-pick
 	ds = diff --staged
-	fp = format-patch
 	lg = log --oneline --decorate --graph
-	lp = log -p --stat
+	lp = log --patch
 	pr = pull --rebase --prune
-	st = status --short --branch
+	st = status
 [color]
 	ui = auto
 [commit]
@@ -37,8 +36,8 @@
 [push]
 	default = tracking
 [rebase]
-	autostash = true
-	autosquash = true
+	autoStash = true
+	autoSquash = true
 [user]
 	name = Keita Urashima
 	email = ursm@ursm.jp
@@ -49,3 +48,7 @@
 	tool = vimdiff
 [merge]
 	tool = vimdiff
+[maintenance]
+	repo = /var/db/repos/gentoo
+	repo = /var/db/repos/go-overlay
+	repo = /var/db/repos/guru

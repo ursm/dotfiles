@@ -1,5 +1,6 @@
-# frozen_string_literal: true
-
-IRB.conf[:PROMPT_MODE]  = :SIMPLE
-IRB.conf[:SAVE_HISTORY] = 10_000
-IRB.conf[:HISTORY_FILE] = File.join(ENV['XDG_DATA_HOME'], 'irb', 'history')
+IRB.conf.update(
+  PROMPT_MODE:      :SIMPLE,
+  SAVE_HISTORY:     10_000,
+  HISTORY_FILE:     File.join(ENV['XDG_DATA_HOME'], 'irb', 'history'),
+  USE_AUTOCOMPLETE: false,
+)
