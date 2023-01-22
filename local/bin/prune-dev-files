@@ -1,8 +1,8 @@
 #!/bin/sh
 
-for f in $(fd config.ru $(git config --get ghq.root)); do
-  root=$(dirname $(realpath $f))
+repos=$(git config --get ghq.root)
 
-  fd $root 'log'             --extension log --changed-before 1d --no-ignore --exec-batch rm
-  fd $root 'tmp/screenshots' --extension png --changed-before 1d --no-ignore --exec-batch rm
+for dir in $(find $repos -name config.ru -printf '%h'); do
+  find $dir/log -name '*.log' -mtime 0 -delete
+  find $dir/tmp/screenshots   -mtime 0 -delete
 done

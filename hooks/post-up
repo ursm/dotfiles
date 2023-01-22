@@ -2,7 +2,7 @@
 
 set -e
 
-rcup -K zsh/.zshenv zsh/.zshrc
+rcup -K config/zsh/.zshenv config/zsh/.zshrc
 
 XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
 

@@ -1,9 +1,12 @@
 bindkey -e
 
+export PNPM_HOME="$XDG_DATA_HOME/pnpm"
+
 path=(
   $XDG_BIN_HOME
   $HOME/.cargo/bin
   $HOME/.dotnet/tools
+  $PNPM_HOME
   $path
 )
 
@@ -25,8 +28,8 @@ export ASDF_GEM_DEFAULT_PACKAGES_FILE=$XDG_CONFIG_HOME/asdf/default-gems
 export ASDF_NPM_DEFAULT_PACKAGES_FILE=$XDG_CONFIG_HOME/asdf/default-npm-packages
 export FZF_ALT_C_COMMAND='fd --type directory --hidden --follow'
 export FZF_CTRL_R_OPTS='--no-sort'
-export FZF_DEFAULT_COMMAND='fd --type file --hidden --follow'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --follow'
 export FZF_DEFAULT_OPTS='--exact'
 export GST_VAAPI_ALL_DRIVERS=1
 export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
@@ -37,7 +40,6 @@ export UNZIP='-O cp932'
 
 zstyle ':anyframe:selector:' use fzf
 zstyle ':anyframe:selector:fzf:' command 'fzf --exact --delimiter / --with-nth -3..'
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 bindkey '^g' anyframe-widget-cd-ghq-repository
 

@@ -37,8 +37,9 @@ vim.keymap.set('n', '<M-k>',            ':<C-u>cprevious<CR>')
 
 vim.keymap.set({'n', 'v'}, '<M-f><M-b>', telescope_builtin.buffers)
 vim.keymap.set({'n', 'v'}, '<M-f><M-c>', telescope_builtin.command_history)
-vim.keymap.set({'n', 'v'}, '<M-f><M-f>', telescope_builtin.builtin)
+vim.keymap.set({'n', 'v'}, '<M-f><M-f>', telescope_builtin.oldfiles)
 vim.keymap.set({'n', 'v'}, '<M-f><M-g>', telescope_ext.live_grep_args.live_grep_args)
+vim.keymap.set({'n', 'v'}, '<M-f><M-m>', telescope_builtin.marks)
 vim.keymap.set({'n', 'v'}, '<M-f><M-r>', telescope_builtin.resume)
 
 vim.cmd 'cabbrev t Telescope'

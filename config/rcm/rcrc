@@ -1,3 +1,2 @@
 DOTFILES_DIRS="$HOME/Repositories/github.com/ursm/dotfiles"
-SYMLINK_DIRS="config/zsh/rc.d vim/conf.d"
 EXCLUDES="bootstrap.sh"
