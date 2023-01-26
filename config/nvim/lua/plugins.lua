@@ -3,6 +3,7 @@ require('packer').startup(function(use)
   use {'AndrewRadev/linediff.vim'}
   use {'EdenEast/nightfox.nvim'}
   use {'RRethy/nvim-treesitter-endwise'}
+  use {'RRethy/nvim-treesitter-textsubjects'}
   use {'andymass/vim-matchup'}
   use {'chentoast/marks.nvim', config = function()
     require('marks').setup {
@@ -85,14 +86,14 @@ require('packer').startup(function(use)
         enable = true
       },
 
-      incremental_selection = {
-        enable = true,
+      textsubjects = {
+        enable         = true,
+        prev_selection = ',',
 
         keymaps = {
-          -- init_selection    = '<M-k>',
-          -- node_incremental  = '<M-k>',
-          -- node_decremental  = '<M-j>',
-          -- scope_incremental = '<M-l>',
+          ['.']  = 'textsubjects-smart',
+          [';']  = 'textsubjects-container-outer',
+          ['i;'] = 'textsubjects-container-inner',
         }
       },
 
@@ -102,7 +103,8 @@ require('packer').startup(function(use)
 
       textobjects = {
         select = {
-          enable = true,
+          enable    = true,
+          lookahead = true,
 
           keymaps = {
             ['al'] = '@block.outer',
