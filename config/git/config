@@ -41,7 +41,7 @@
 [user]
 	name = Keita Urashima
 	email = ursm@ursm.jp
-	signingkey = 31F7FAA07C3C63994091956C95B966221E4F9294
+	signingkey = BABF2B185CCA1E5CB043AF877184AF0D403D45AF
 [core]
 	quotepath = off
 [diff]

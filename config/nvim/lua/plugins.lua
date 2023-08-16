@@ -79,7 +79,7 @@ require('packer').startup(function(use)
         'typescript',
         'vim',
         'vue',
-        'yaml',
+        -- 'yaml',
       },
 
       highlight = {
@@ -222,26 +222,26 @@ require('mason-lspconfig').setup {
     'cucumber_language_server',
     'dockerls',
     'ember',
+    'eslint',
     'gopls',
     'graphql',
     'html',
     'jdtls',
     'jsonls',
     'lemminx',
+    'lua_ls',
     'marksman',
     'pylsp',
     'ruby_ls',
     'rust_analyzer',
-    'sqls',
-    'sumneko_lua',
+    'sqlls',
     'svelte',
     'taplo',
     'terraformls',
     'tsserver',
     'vimls',
-    'vuels',
+    'volar',
     'yamlls',
-    'eslint',
   }
 }
 
@@ -254,7 +254,7 @@ lspconfig.cssls.setup {}
 lspconfig.cucumber_language_server.setup {}
 lspconfig.dockerls.setup {}
 lspconfig.ember.setup {}
--- lspconfig.eslint.setup {}
+lspconfig.eslint.setup {}
 lspconfig.gopls.setup {}
 lspconfig.graphql.setup {}
 lspconfig.html.setup {}
@@ -263,10 +263,10 @@ lspconfig.jsonls.setup {}
 lspconfig.lemminx.setup {}
 lspconfig.marksman.setup {}
 lspconfig.pylsp.setup {}
--- lspconfig.ruby_ls.setup {}
+lspconfig.ruby_ls.setup {}
 lspconfig.rust_analyzer.setup {}
-lspconfig.sqls.setup {}
-lspconfig.sumneko_lua.setup {
+lspconfig.sqlls.setup {}
+lspconfig.lua_ls.setup {
   settings = {
     Lua = {
       diagnostics = {
@@ -281,5 +281,5 @@ lspconfig.taplo.setup {}
 lspconfig.terraformls.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.vimls.setup {}
-lspconfig.vuels.setup {}
+lspconfig.volar.setup {}
 lspconfig.yamlls.setup {}
