@@ -1,6 +1,7 @@
 [alias]
 	br = branch
 	ca = commit --amend
+	can = commit --amend --no-edit
 	ci = commit
 	cp = cherry-pick
 	ds = diff --staged
@@ -8,6 +9,8 @@
 	lp = log --patch
 	pr = pull --rebase --prune
 	st = status
+	ps = push
+	psf = push --force-with-lease
 [color]
 	ui = auto
 [commit]
@@ -46,6 +49,8 @@
 	quotepath = off
 [diff]
 	tool = vimdiff
+	algorithm = histogram
+	colorMoved = dimmed-zebra
 [merge]
 	tool = vimdiff
 [maintenance]

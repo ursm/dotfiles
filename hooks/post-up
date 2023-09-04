@@ -11,9 +11,3 @@ packer=$XDG_DATA_HOME/nvim/site/pack/packer/start/packer.nvim
 if [ ! -e $packer ]; then
   git clone --depth 1 https://github.com/wbthomason/packer.nvim $packer
 fi
-
-asdf=$XDG_DATA_HOME/asdf/core
-
-if [ ! -e $asdf ]; then
-  git clone --depth 1 https://github.com/asdf-vm/asdf.git $asdf
-fi

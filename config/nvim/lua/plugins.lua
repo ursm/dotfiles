@@ -98,7 +98,7 @@ require('packer').startup(function(use)
       },
 
       indent = {
-        enable = true
+        enable = false
       },
 
       textobjects = {
@@ -223,6 +223,7 @@ require('mason-lspconfig').setup {
     'dockerls',
     'ember',
     'eslint',
+    'glint',
     'gopls',
     'graphql',
     'html',
@@ -255,6 +256,7 @@ lspconfig.cucumber_language_server.setup {}
 lspconfig.dockerls.setup {}
 lspconfig.ember.setup {}
 lspconfig.eslint.setup {}
+lspconfig.glint.setup {}
 lspconfig.gopls.setup {}
 lspconfig.graphql.setup {}
 lspconfig.html.setup {}
