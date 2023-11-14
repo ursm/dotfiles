@@ -4,6 +4,7 @@
 .DS_Store
 ._*
 .env
+.env.sentry-build-plugin
 .envrc
 .foreman
 .gradle
@@ -13,5 +14,6 @@
 .ruby-version
 .tool-versions
 .vscode/
+compose.override.yaml
 npm-debug.log
 yarn-error.log

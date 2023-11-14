@@ -15,7 +15,7 @@ use = ['autocomplete/zsh_setup']
 
 [plugins.ohmyzsh]
 github = 'ohmyzsh/ohmyzsh'
-use = ['lib/{git,history,termsupport,theme-and-appearance}.zsh', 'themes/gentoo.zsh-theme']
+use = ['lib/{functions,git,history,termsupport,theme-and-appearance}.zsh', 'themes/gentoo.zsh-theme']
 
 [plugins.zsh-abbr]
 github = 'olets/zsh-abbr'

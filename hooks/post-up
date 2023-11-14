@@ -5,9 +5,3 @@ set -e
 rcup -K config/zsh/.zshenv config/zsh/.zshrc
 
 XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
-
-packer=$XDG_DATA_HOME/nvim/site/pack/packer/start/packer.nvim
-
-if [ ! -e $packer ]; then
-  git clone --depth 1 https://github.com/wbthomason/packer.nvim $packer
-fi
