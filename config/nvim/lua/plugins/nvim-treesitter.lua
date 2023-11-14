@@ -32,7 +32,7 @@ return {
       'typescript',
       'vim',
       'vue',
-      -- 'yaml',
+      'yaml',
     },
 
     sync_install = false,
@@ -41,86 +41,8 @@ return {
       enable = true
     },
 
-    textsubjects = {
-      enable         = true,
-      prev_selection = ',',
-
-      keymaps = {
-        ['.']  = 'textsubjects-smart',
-        [';']  = 'textsubjects-container-outer',
-        ['i;'] = 'textsubjects-container-inner',
-      }
-    },
-
     indent = {
       enable = false
-    },
-
-    textobjects = {
-      select = {
-        enable    = true,
-        lookahead = true,
-
-        keymaps = {
-          ['al'] = '@block.outer',
-          ['il'] = '@block.inner',
-          ['ac'] = '@class.outer',
-          ['ic'] = '@class.inner',
-          ['af'] = '@function.outer',
-          ['if'] = '@function.inner',
-        },
-
-        selection_modes = {
-          ['@parameter.outer'] = 'v',
-          ['@function.outer']  = 'V',
-          ['@class.outer']     = '<C-v>',
-        }
-      },
-
-      swap = {
-        enable = true,
-
-        swap_next = {
-          ['<Leader>a'] = '@parameter.inner',
-        },
-
-        swap_previous = {
-          ['<Leader>A'] = '@parameter.inner',
-        }
-      },
-
-      move = {
-        enable = true,
-
-        goto_next_start = {
-          [']m'] = '@function.outer',
-          [']]'] = '@class.outer',
-        },
-
-        goto_next_end = {
-          [']M'] = '@function.outer',
-          [']['] = '@class.outer',
-        },
-
-        goto_previous_start = {
-          ['[m'] = '@function.outer',
-          ['[['] = '@class.outer',
-        },
-
-        goto_previous_end = {
-          ['[M'] = '@function.outer',
-          ['[]'] = '@class.outer',
-        },
-      },
-
-      lsp_interop = {
-        enable = true,
-
-        peek_definition_code = {
-          ['<Leader>df'] = '@function.outer',
-          ['<Leader>dF'] = '@class.outer',
-        },
-      }
     },
 
     matchup = {

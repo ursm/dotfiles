@@ -4,8 +4,8 @@ return {
     config = function()
       vim.keymap.set('x', 'iu', ':lua require"treesitter-unit".select()<CR>')
       vim.keymap.set('x', 'au', ':lua require"treesitter-unit".select(true)<CR>')
-      vim.keymap.set('o', 'iu', ':<c-u>lua require"treesitter-unit".select()<CR>')
-      vim.keymap.set('o', 'au', ':<c-u>lua require"treesitter-unit".select(true)<CR>')
+      vim.keymap.set('o', 'iu', ':<C-u>lua require"treesitter-unit".select()<CR>')
+      vim.keymap.set('o', 'au', ':<C-u>lua require"treesitter-unit".select(true)<CR>')
     end
   },
   {
@@ -30,7 +30,25 @@ return {
     opts = {}
   },
   'gabrielpoca/replacer.nvim',
-  'gbprod/substitute.nvim',
+  {
+    'gbprod/substitute.nvim',
+    opts = {},
+    config = function()
+      vim.keymap.set('n', 's',  require('substitute').operator)
+      vim.keymap.set('n', 'ss', require('substitute').line)
+      vim.keymap.set('n', 'S',  require('substitute').eol)
+      vim.keymap.set('x', 's',  require('substitute').visual)
+
+      vim.keymap.set('n', '<Space>s',  require('substitute.range').operator)
+      vim.keymap.set('x', '<Space>s',  require('substitute.range').visual)
+      vim.keymap.set('n', '<Space>ss', require('substitute.range').word)
+
+      vim.keymap.set('n', 'sx',  require('substitute.exchange').operator)
+      vim.keymap.set('n', 'sxx', require('substitute.exchange').line)
+      vim.keymap.set('x', 'X',   require('substitute.exchange').visual)
+      vim.keymap.set('n', 'sxc', require('substitute.exchange').cancel)
+    end
+  },
   {
     'iamcco/markdown-preview.nvim',
     ft = { 'markdown' },
@@ -41,7 +59,11 @@ return {
   {
     'ggandor/leap.nvim',
     config = function()
-      require('leap').add_default_mappings()
+      vim.keymap.set({ 'n', 'x', 'o' }, '<Space>f',  '<Plug>(leap-forward-to)')
+      vim.keymap.set({ 'n', 'x', 'o' }, '<Space>F',  '<Plug>(leap-forward-till)')
+      vim.keymap.set({ 'n', 'x', 'o' }, '<Space>t',  '<Plug>(leap-backward-to)')
+      vim.keymap.set({ 'n', 'x', 'o' }, '<Space>T',  '<Plug>(leap-badkward-till)')
+      vim.keymap.set({ 'n', 'x', 'o' }, '<Space>w',  '<Plug>(leap-from-window)')
     end
   },
   'hrsh7th/cmp-buffer',
@@ -55,13 +77,6 @@ return {
   {
     'junegunn/vim-easy-align',
     config = function()
-      vim.keymap.set('x', '<Leader> ',  ':EasyAlign<CR> <CR>')
-      vim.keymap.set('x', '<Leader>* ', ':EasyAlign<CR>* <CR>')
-      vim.keymap.set('x', '<Leader>*,', ':EasyAlign<CR>*,<CR>')
-      vim.keymap.set('x', '<Leader>,',  ':EasyAlign ,<CR>')
-      vim.keymap.set('x', '<Leader>:',  ':EasyAlign :<CR>')
-      vim.keymap.set('x', '<Leader>=',  ':EasyAlign =<CR>')
-
       vim.cmd 'cabbrev a EasyAlign'
     end
   },
@@ -79,18 +94,10 @@ return {
     'nvim-telescope/telescope.nvim',
     dependencies = 'nvim-lua/plenary.nvim',
     config = function()
-      local builtin = require('telescope.builtin')
-
-      vim.keymap.set('n', '<Leader><Leader>',  builtin.oldfiles, {})
-      vim.keymap.set('n', '<Leader>fb',        builtin.buffers, {})
-      vim.keymap.set('n', '<Leader>ff',        builtin.find_files, {})
-      vim.keymap.set('n', '<Leader>fg',        builtin.live_grep, {})
-      vim.keymap.set('n', '<Leader>fm',        builtin.marks, {})
-      vim.keymap.set('n', '<Leader>fr',        builtin.resume, {})
-      vim.keymap.set('n', '<Leader>ft',        builtin.treesitter, {})
-      vim.keymap.set({'n', 'x'}, '<Leader>fc', builtin.command_history, {})
-
       vim.cmd 'cabbrev t Telescope'
+
+      vim.keymap.set('n', '<Space><Space>',    require('telescope.builtin').oldfiles, {})
+      vim.keymap.set({ 'n', 'x' }, '<Space>c', require('telescope.builtin').command_history, {})
     end
   },
   'mizlan/iswap.nvim',
