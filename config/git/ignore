@@ -10,9 +10,6 @@
 .gradle
 .netlify/
 .netrwhist
-.node-version
-.ruby-version
-.tool-versions
 .vscode/
 compose.override.yaml
 npm-debug.log

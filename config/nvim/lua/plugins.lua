@@ -23,13 +23,19 @@ return {
   'andymass/vim-matchup',
   'dhruvasagar/vim-table-mode',
   'editorconfig/editorconfig-vim',
+  'evanleck/vim-svelte',
   'famiu/bufdelete.nvim',
   {
     'folke/trouble.nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
     opts = {}
   },
-  'gabrielpoca/replacer.nvim',
+  {
+    'gabrielpoca/replacer.nvim',
+    config = function()
+      vim.keymap.set('n', '<Space>r', require('replacer').run, { silent = true })
+    end
+  },
   {
     'gbprod/substitute.nvim',
     opts = {},
@@ -74,10 +80,11 @@ return {
   'hrsh7th/nvim-cmp',
   'hrsh7th/vim-vsnip',
   'jghauser/mkdir.nvim',
+  'joukevandermaas/vim-ember-hbs',
   {
     'junegunn/vim-easy-align',
     config = function()
-      vim.cmd 'cabbrev a EasyAlign'
+      vim.cmd 'cabbrev ea EasyAlign'
     end
   },
   {
@@ -103,19 +110,25 @@ return {
   'mizlan/iswap.nvim',
   'rhysd/conflict-marker.vim',
   'rhysd/git-messenger.vim',
+  {
+    'stevearc/oil.nvim',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    opts = {}
+  },
   'tpope/vim-commentary',
   'tpope/vim-eunuch',
   'tpope/vim-fugitive',
   'tpope/vim-rails',
   'tpope/vim-sleuth',
   'tpope/vim-unimpaired',
+  'varnishcache-friends/vim-varnish',
   'vim-ruby/vim-ruby',
-  {
-    'windwp/nvim-autopairs',
-    opts = {
-      check_ts = true
-    }
-  },
+  -- {
+  --   'windwp/nvim-autopairs',
+  --   opts = {
+  --     check_ts = true
+  --   }
+  -- },
   'windwp/nvim-ts-autotag',
   'wsdjeg/vim-fetch'
 }

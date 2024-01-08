@@ -28,6 +28,8 @@ return {
       'ruby_ls',
       'rust_analyzer',
       'sqlls',
+      'svelte',
+      'stimulus_ls',
       'taplo',
       'terraformls',
       'tsserver',

@@ -46,7 +46,3 @@ bindkey '^g' anyframe-widget-cd-ghq-repository
 hash -d github=$HOME/Repositories/github.com
 
 eval "$(direnv hook zsh)"
-
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent

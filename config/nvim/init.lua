@@ -10,7 +10,9 @@ require('lazy').setup 'plugins'
 
 vim.opt.breakindent = true
 vim.opt.cursorline  = true
+vim.opt.list        = true
 vim.opt.number      = true
+vim.opt.tabstop     = 4
 vim.opt.wildmode    = {'longest:full', 'full'}
 
 vim.keymap.set('n', '<Space>h', ':nohlsearch<CR>')
@@ -20,7 +22,7 @@ vim.keymap.set('n', '<M-k>',    ':<C-u>cprevious<CR>')
 vim.keymap.set('c', '<C-a>', '<Home>')
 vim.keymap.set('c', '<C-x>', "<C-r>=expand('%:p:h')<CR>/")
 
-vim.keymap.set('x', '<Space>s',  ':sort<CR>')
+vim.keymap.set('x', '<Space>s', ':sort<CR>')
 
 if vim.fn.executable('rg') == 1 then
   vim.o.grepprg    = 'rg --vimgrep --hidden'
