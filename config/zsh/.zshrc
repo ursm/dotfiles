@@ -14,7 +14,7 @@ HISTFILE=$XDG_DATA_HOME/zsh/history
 fpath+=($ZDOTDIR/functions)
 
 eval "$(sheldon source)"
-eval "$(rtx activate zsh)"
+eval "$(mise activate zsh)"
 
 autoload -Uz compinit && compinit
 autoload -Uz promptinit && promptinit

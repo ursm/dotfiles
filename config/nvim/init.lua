@@ -16,6 +16,8 @@ vim.opt.tabstop     = 4
 vim.opt.wildmode    = {'longest:full', 'full'}
 
 vim.keymap.set('n', '<Space>h', ':nohlsearch<CR>')
+vim.keymap.set('n', '<Space>p', '"0p');
+vim.keymap.set('n', '<Space>P', '"0P');
 vim.keymap.set('n', '<M-j>',    ':<C-u>cnext<CR>')
 vim.keymap.set('n', '<M-k>',    ':<C-u>cprevious<CR>')
 
