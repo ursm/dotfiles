@@ -26,6 +26,7 @@ return {
       vim.keymap.set('n', '<Space>r', require('replacer').run)
     end
   },
+  'github/copilot.vim',
   {
     'iamcco/markdown-preview.nvim',
     ft = { 'markdown' },
@@ -82,6 +83,7 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     opts = {}
   },
+  'rlue/vim-barbaric',
   'slim-template/vim-slim',
   'tpope/vim-commentary',
   'tpope/vim-eunuch',
