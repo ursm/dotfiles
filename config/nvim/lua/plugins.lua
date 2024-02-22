@@ -5,21 +5,14 @@ return {
       vim.cmd 'colorscheme nightfox'
     end
   },
-  'RRethy/nvim-treesitter-endwise',
   {
     'Wansmer/treesj',
     opts = {}
   },
-  'andersevenrud/nvim_context_vt',
   'andymass/vim-matchup',
   'dhruvasagar/vim-table-mode',
   'editorconfig/editorconfig-vim',
   'famiu/bufdelete.nvim',
-  {
-    'folke/trouble.nvim',
-    dependencies = 'kyazdani42/nvim-web-devicons',
-    opts = {}
-  },
   {
     'gabrielpoca/replacer.nvim',
     config = function()
@@ -35,7 +28,6 @@ return {
     end
   },
   'jghauser/mkdir.nvim',
-  'joukevandermaas/vim-ember-hbs',
   {
     'junegunn/vim-easy-align',
     config = function()
@@ -92,8 +84,6 @@ return {
   'tpope/vim-sleuth',
   'tpope/vim-unimpaired',
   'varnishcache-friends/vim-varnish',
-  'vim-ruby/vim-ruby',
-  'vim-test/vim-test',
   'windwp/nvim-ts-autotag',
   'wsdjeg/vim-fetch'
 }
