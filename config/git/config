@@ -16,8 +16,13 @@
 [commit]
 	verbose = true
 	gpgsign = 1
+[core]
+	quotepath = off
 [credential]
 	helper = libsecret
+[diff]
+	algorithm = histogram
+	colorMoved = dimmed-zebra
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -34,6 +39,10 @@
 	defaultBranch = main
 [log]
 	date = iso
+[maintenance]
+	repo = /var/db/repos/gentoo
+	repo = /var/db/repos/go-overlay
+	repo = /var/db/repos/guru
 [pull]
 	rebase = true
 [push]
@@ -45,15 +54,3 @@
 	name = Keita Urashima
 	email = ursm@ursm.jp
 	signingkey = BABF2B185CCA1E5CB043AF877184AF0D403D45AF
-[core]
-	quotepath = off
-[diff]
-	tool = vimdiff
-	algorithm = histogram
-	colorMoved = dimmed-zebra
-[merge]
-	tool = vimdiff
-[maintenance]
-	repo = /var/db/repos/gentoo
-	repo = /var/db/repos/go-overlay
-	repo = /var/db/repos/guru
