@@ -20,6 +20,12 @@
 	quotepath = off
 [credential]
 	helper = libsecret
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
 [diff]
 	algorithm = histogram
 	colorMoved = dimmed-zebra
@@ -41,7 +47,6 @@
 	date = iso
 [maintenance]
 	repo = /var/db/repos/gentoo
-	repo = /var/db/repos/go-overlay
 	repo = /var/db/repos/guru
 [pull]
 	rebase = true
