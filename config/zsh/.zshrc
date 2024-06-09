@@ -33,7 +33,6 @@ export LESSHISTFILE=$XDG_CACHE_HOME/less/history
 export PGUSER=postgres
 export RCRC=$XDG_CONFIG_HOME/rcm/rcrc
 export RUBY_CFLAGS='-O0 -march=native'
-export RUBY_MAKE_OPTS='--jobs=32'
 export RUBY_YJIT_ENABLE=1
 export UNZIP='-O cp932'
 
@@ -46,3 +45,7 @@ bindkey '^g' anyframe-widget-cd-ghq-repository
 hash -d github=$HOME/Repositories/github.com
 
 eval "$(direnv hook zsh)"
+
+if [ -e /etc/wsl.conf ]; then
+  source $XDG_CONFIG_HOME/zsh/wsl.zsh
+fi
