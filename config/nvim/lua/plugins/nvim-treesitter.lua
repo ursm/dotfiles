@@ -6,7 +6,7 @@ return {
     'JoosepAlviste/nvim-ts-context-commentstring',
     'RRethy/nvim-treesitter-endwise',
     'andymass/vim-matchup',
-    'nvim-treesitter/nvim-treesitter-context',
+    -- 'nvim-treesitter/nvim-treesitter-context',
     'nvim-treesitter/nvim-treesitter-refactor',
     'nvim-treesitter/nvim-treesitter-textobjects',
     'windwp/nvim-ts-autotag',

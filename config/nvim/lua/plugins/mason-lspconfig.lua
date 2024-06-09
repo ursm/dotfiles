@@ -1,44 +1,49 @@
 return {
   'williamboman/mason-lspconfig.nvim',
+
   dependencies = {
-    'williamboman/mason.nvim',
-    opts = {}
+    {
+      'williamboman/mason.nvim',
+      opts = {}
+    },
+    'hrsh7th/cmp-nvim-lsp',
   },
-  opts = {
-    ensure_installed = {
-      'ansiblels',
-      'bashls',
-      'csharp_ls',
-      'cssls',
-      'denols',
-      'dockerls',
-      'docker_compose_language_service',
-      'ember',
-      'eslint',
-      'glint',
-      'gopls',
-      'graphql',
-      'html',
-      'jdtls',
-      'jsonls',
-      'lemminx',
-      'lua_ls',
-      'marksman',
-      'pylsp',
-      'ruby_ls',
-      'rust_analyzer',
-      'sqlls',
-      'svelte',
-      'stimulus_ls',
-      'taplo',
-      'terraformls',
-      'tsserver',
-      'vimls',
-      'vuels',
-      'yamlls',
-    }
-  },
+
   config = function()
+    require('mason-lspconfig').setup {
+      ensure_installed = {
+        'ansiblels',
+        'autotools_ls',
+        'bashls',
+        'clangd',
+        'cssls',
+        'denols',
+        'dockerls',
+        'docker_compose_language_service',
+        'ember',
+        'eslint',
+        'glint',
+        'gopls',
+        'graphql',
+        'html',
+        'jsonls',
+        'lemminx',
+        'lua_ls',
+        'marksman',
+        'pylsp',
+        'rubocop',
+        'ruby_lsp',
+        'rust_analyzer',
+        'sqlls',
+        'stimulus_ls',
+        'taplo',
+        'terraformls',
+        'tsserver',
+        'vimls',
+        'yamlls',
+      }
+    }
+
     local opt = {
       capabilities = require('cmp_nvim_lsp').default_capabilities(
         vim.lsp.protocol.make_client_capabilities()

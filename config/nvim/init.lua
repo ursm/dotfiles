@@ -8,12 +8,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup 'plugins'
 
-vim.opt.breakindent = true
-vim.opt.cursorline  = true
-vim.opt.list        = true
-vim.opt.number      = true
-vim.opt.tabstop     = 4
-vim.opt.wildmode    = {'longest:full', 'full'}
+vim.opt.ambiwidth     = 'double'
+vim.opt.breakindent   = true
+vim.opt.cursorline    = true
+vim.opt.fileencodings = {'ucs-boms', 'utf-8', 'cp932', 'euc-jp'}
+vim.opt.list          = true
+vim.opt.number        = true
+vim.opt.tabstop       = 4
+vim.opt.wildmode      = {'longest:full', 'full'}
 
 vim.keymap.set('n', '<Space>h', ':nohlsearch<CR>')
 vim.keymap.set('n', '<Space>p', '"0p');

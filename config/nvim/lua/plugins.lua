@@ -10,9 +10,21 @@ return {
     opts = {}
   },
   'andymass/vim-matchup',
+  'bioSyntax/bioSyntax-vim',
+  {
+	"chrisgrieser/nvim-various-textobjs",
+	opts = {
+      useDefaultKeymaps = true
+    },
+  },
   'dhruvasagar/vim-table-mode',
   'editorconfig/editorconfig-vim',
   'famiu/bufdelete.nvim',
+  {
+    'folke/trouble.nvim',
+    dependencies = 'kyazdani42/nvim-web-devicons',
+    opts = {}
+  },
   {
     'gabrielpoca/replacer.nvim',
     config = function()
@@ -37,10 +49,6 @@ return {
     end
   },
   {
-    'kana/vim-textobj-indent',
-    dependencies = 'kana/vim-textobj-user'
-  },
-  {
     'kylechui/nvim-surround',
     opts = {}
   },
@@ -57,7 +65,7 @@ return {
 
       local builtin = require('telescope.builtin')
 
-      vim.keymap.set('n', '<Space>fb', builtin.buffers)
+      vim.keymap.set('n', '<Space><Space>', builtin.buffers)
       vim.keymap.set('n', '<Space>ff', builtin.find_files)
       vim.keymap.set('n', '<Space>fm', builtin.marks)
       vim.keymap.set('n', '<Space>fo', builtin.oldfiles)
