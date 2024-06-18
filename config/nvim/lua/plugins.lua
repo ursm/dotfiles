@@ -7,13 +7,15 @@ return {
   },
   {
     'Wansmer/treesj',
-    opts = {}
+    opts = {
+      use_default_keymaps = true
+    }
   },
   'andymass/vim-matchup',
   'bioSyntax/bioSyntax-vim',
   {
-	"chrisgrieser/nvim-various-textobjs",
-	opts = {
+    "chrisgrieser/nvim-various-textobjs",
+    opts = {
       useDefaultKeymaps = true
     },
   },
@@ -38,6 +40,7 @@ return {
       vim.fn['mkdp#util#install']()
     end
   },
+  'imsnif/kdl.vim',
   'jghauser/mkdir.nvim',
   {
     'junegunn/vim-easy-align',
