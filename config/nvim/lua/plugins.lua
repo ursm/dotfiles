@@ -1,18 +1,11 @@
 return {
   {
-    'EdenEast/nightfox.nvim',
-    config = function()
-      vim.cmd 'colorscheme nightfox'
-    end
-  },
-  {
     'Wansmer/treesj',
     opts = {
       use_default_keymaps = true
     }
   },
   'andymass/vim-matchup',
-  'bioSyntax/bioSyntax-vim',
   {
     "chrisgrieser/nvim-various-textobjs",
     opts = {
@@ -21,7 +14,6 @@ return {
   },
   'dhruvasagar/vim-table-mode',
   'editorconfig/editorconfig-vim',
-  'famiu/bufdelete.nvim',
   {
     'folke/trouble.nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
@@ -59,7 +51,19 @@ return {
     'kevinhwang91/nvim-hlslens',
     opts = {}
   },
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    opts = {}
+  },
   'machakann/vim-swap',
+  {
+    'morhetz/gruvbox',
+    config = function()
+      vim.cmd 'colorscheme gruvbox'
+    end
+  },
+  'mizlan/iswap.nvim',
   {
     'nvim-telescope/telescope.nvim',
     dependencies = 'nvim-lua/plenary.nvim',
@@ -68,7 +72,7 @@ return {
 
       local builtin = require('telescope.builtin')
 
-      vim.keymap.set('n', '<Space><Space>', builtin.buffers)
+      vim.keymap.set('n', '<Space>fb', builtin.buffers)
       vim.keymap.set('n', '<Space>ff', builtin.find_files)
       vim.keymap.set('n', '<Space>fm', builtin.marks)
       vim.keymap.set('n', '<Space>fo', builtin.oldfiles)
@@ -77,7 +81,6 @@ return {
       vim.keymap.set({ 'n', 'x' }, '<Space>fc', require('telescope.builtin').command_history)
     end
   },
-  'mizlan/iswap.nvim',
   'rhysd/conflict-marker.vim',
   'rhysd/git-messenger.vim',
   {
