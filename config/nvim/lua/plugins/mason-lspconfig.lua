@@ -41,7 +41,7 @@ return {
         'stimulus_ls',
         'taplo',
         'terraformls',
-        'tsserver',
+        'ts_ls',
         'vimls',
         'yamlls',
       }

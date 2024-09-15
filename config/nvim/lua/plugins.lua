@@ -7,10 +7,11 @@ return {
   },
   'andymass/vim-matchup',
   {
-    "chrisgrieser/nvim-various-textobjs",
-    opts = {
-      useDefaultKeymaps = true
-    },
+    'deris/columnjump',
+    config = function()
+      vim.keymap.set('n', '<Space>k', '<Plug>(columnjump-backward)')
+      vim.keymap.set('n', '<Space>j', '<Plug>(columnjump-forward)')
+    end
   },
   'dhruvasagar/vim-table-mode',
   'editorconfig/editorconfig-vim',
@@ -18,12 +19,6 @@ return {
     'folke/trouble.nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
     opts = {}
-  },
-  {
-    'gabrielpoca/replacer.nvim',
-    config = function()
-      vim.keymap.set('n', '<Space>r', require('replacer').run)
-    end
   },
   'github/copilot.vim',
   {
@@ -44,11 +39,40 @@ return {
     end
   },
   {
-    'kylechui/nvim-surround',
+    'kevinhwang91/nvim-hlslens',
     opts = {}
   },
   {
-    'kevinhwang91/nvim-hlslens',
+    'kiyoon/treesitter-indent-object.nvim',
+    keys = {
+      {
+        'ai',
+        function() require'treesitter_indent_object.textobj'.select_indent_outer() end,
+        mode = {'x', 'o'},
+        desc = 'Select context-aware indent (outer)'
+      },
+      {
+        'aI',
+        function() require'treesitter_indent_object.textobj'.select_indent_outer(true) end,
+        mode = {'x', 'o'},
+        desc = 'Select context-aware indent (outer, line-wise)'
+      },
+      {
+        'ii',
+        function() require'treesitter_indent_object.textobj'.select_indent_inner() end,
+        mode = {'x', 'o'},
+        desc = 'Select context-aware indent (inner, partial range)'
+      },
+      {
+        'iI',
+        function() require'treesitter_indent_object.textobj'.select_indent_inner(true, 'V') end,
+        mode = {'x', 'o'},
+        desc = 'Select context-aware indent (inner, entire range) in line-wise visual mode'
+      }
+    }
+  },
+  {
+    'kylechui/nvim-surround',
     opts = {}
   },
   {
@@ -90,6 +114,8 @@ return {
   },
   'rlue/vim-barbaric',
   'slim-template/vim-slim',
+  'thinca/vim-ambicmd',
+  'thinca/vim-qfreplace',
   'tpope/vim-commentary',
   'tpope/vim-eunuch',
   'tpope/vim-fugitive',
