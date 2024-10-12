@@ -13,6 +13,7 @@
 	ps = push
 	psf = push --force-with-lease
 	r = restore
+	rc = rebase --continue
 	st = status
 [color]
 	ui = auto

@@ -8,6 +8,7 @@
 .envrc
 .foreman
 .gradle
+.mise.toml
 .netlify/
 .netrwhist
 .vscode/

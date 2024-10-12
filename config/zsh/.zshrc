@@ -44,8 +44,6 @@ bindkey '^g' anyframe-widget-cd-ghq-repository
 
 hash -d github=$HOME/Repositories/github.com
 
-eval "$(direnv hook zsh)"
-
 if [ -e /etc/wsl.conf ]; then
   source $XDG_CONFIG_HOME/zsh/wsl.zsh
 fi
