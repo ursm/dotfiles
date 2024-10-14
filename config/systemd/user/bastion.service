@@ -1,5 +1,0 @@
-[Service]
-ExecStart=/usr/bin/autossh -M 20000 -D 1080 -N -v bastion.ursm.jp
-
-[Install]
-WantedBy=default.target
