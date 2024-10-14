@@ -32,7 +32,6 @@ return {
         'lemminx',
         'lua_ls',
         'marksman',
-        'nginx_language_server',
         'pylsp',
         'rubocop',
         'ruby_lsp',

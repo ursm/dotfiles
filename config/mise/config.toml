@@ -1,0 +1,4 @@
+[tools]
+node = "lts"
+ruby = "3.3.5"
+usage = "latest"
