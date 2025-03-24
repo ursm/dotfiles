@@ -1,0 +1,17 @@
+*.retry
+*.sw[a-p]
+*~
+.DS_Store
+._*
+.env
+.env.sentry-build-plugin
+.envrc
+.foreman
+.gradle
+.mise.toml
+.netlify/
+.netrwhist
+.vscode/
+compose.override.yaml
+npm-debug.log
+yarn-error.log

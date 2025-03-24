@@ -1,0 +1,69 @@
+[alias]
+	a = add
+	br = branch
+	ca = commit --amend
+	can = commit --amend --no-edit
+	ci = commit
+	cp = cherry-pick
+	d = diff
+	ds = diff --staged
+	lg = log --oneline --decorate --graph
+	lp = log --patch
+	pr = pull --rebase --prune
+	ps = push
+	psf = push --force-with-lease
+	r = restore
+	rc = rebase --continue
+	st = status
+[color]
+	ui = auto
+[commit]
+	verbose = true
+	gpgsign = 1
+[core]
+	quotepath = off
+[credential]
+	helper = libsecret
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[diff]
+	algorithm = histogram
+	colorMoved = dimmed-zebra
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[ghq]
+	root = ~/Repositories
+[github]
+	user = ursm
+[gpg]
+	program = gpg2
+[heroku]
+	account = ursm
+[init]
+	defaultBranch = main
+[log]
+	date = iso
+[maintenance]
+	repo = /var/db/repos/gentoo
+	repo = /var/db/repos/guru
+[pager]
+	diff = diff-highlight | less
+	log = diff-highlight | less
+	show = diff-highlight | less
+[pull]
+	rebase = true
+[push]
+	default = tracking
+[rebase]
+	autoStash = true
+	autoSquash = true
+[user]
+	name = Keita Urashima
+	email = ursm@ursm.jp
+	signingkey = BABF2B185CCA1E5CB043AF877184AF0D403D45AF

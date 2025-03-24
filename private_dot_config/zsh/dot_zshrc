@@ -1,0 +1,37 @@
+bindkey -e
+
+export PNPM_HOME="$XDG_DATA_HOME/pnpm"
+
+path=(
+  $XDG_BIN_HOME
+  $HOME/.cargo/bin
+  $HOME/.dotnet/tools
+  $PNPM_HOME
+  $path
+)
+
+HISTFILE=$XDG_DATA_HOME/zsh/history
+fpath+=($XDG_DATA_HOME/zsh/functions)
+
+eval "$(sheldon source)"
+eval "$(mise activate zsh)"
+
+autoload -Uz compinit && compinit
+autoload -Uz promptinit && promptinit
+autoload -Uz zmv
+
+PROMPT=${PROMPT:s/%(!.#.$)/$prompt_newline%(!.#.$)} # break a line before the prompt symbol ($, #)
+
+export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
+export PGUSER=postgres
+export RCRC=$XDG_CONFIG_HOME/rcm/rcrc
+export RUBY_CFLAGS='-march=native'
+export UNZIP='-O cp932'
+
+zstyle ':anyframe:selector:' use fzf
+zstyle ':anyframe:selector:fzf:' command 'fzf --exact --delimiter / --with-nth -3..'
+
+bindkey '^b' anyframe-widget-insert-git-branch
+bindkey '^g' anyframe-widget-cd-ghq-repository
+
+hash -d github=$HOME/Repositories/github.com

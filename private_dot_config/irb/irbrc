@@ -1,0 +1,5 @@
+IRB.conf.update(
+  PROMPT_MODE:  :SIMPLE,
+  SAVE_HISTORY: 10_000,
+  HISTORY_FILE: File.join(ENV['XDG_DATA_HOME'], 'irb', 'history')
+)
