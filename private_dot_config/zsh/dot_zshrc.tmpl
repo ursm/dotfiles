@@ -22,8 +22,11 @@ autoload -Uz zmv
 
 PROMPT=${PROMPT:s/%(!.#.$)/$prompt_newline%(!.#.$)} # break a line before the prompt symbol ($, #)
 
+export EDITOR=nvim
 export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
+{{- if ne .chezmoi.os "darwin" }}
 export PGUSER=postgres
+{{- end }}
 export RCRC=$XDG_CONFIG_HOME/rcm/rcrc
 export RUBY_CFLAGS='-march=native'
 export UNZIP='-O cp932'
