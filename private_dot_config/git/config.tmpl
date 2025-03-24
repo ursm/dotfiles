@@ -23,13 +23,17 @@
 [core]
 	quotepath = off
 [credential]
+{{- if eq .chezmoi.os "darwin" }}
+	helper = osxkeychain
+{{- else }}
 	helper = libsecret
+{{- end }}
 [credential "https://github.com"]
 	helper =
-	helper = !/usr/bin/gh auth git-credential
+	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
 	helper =
-	helper = !/usr/bin/gh auth git-credential
+	helper = !gh auth git-credential
 [diff]
 	algorithm = histogram
 	colorMoved = dimmed-zebra
