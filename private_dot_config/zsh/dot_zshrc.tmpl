@@ -29,7 +29,9 @@ export PGUSER=postgres
 {{- end }}
 export RCRC=$XDG_CONFIG_HOME/rcm/rcrc
 export RUBY_CFLAGS='-march=native'
+{{- if eq .chezmoi.os "linux" }}
 export UNZIP='-O cp932'
+{{- end }}
 
 zstyle ':anyframe:selector:' use fzf
 zstyle ':anyframe:selector:fzf:' command 'fzf --exact --delimiter / --with-nth -3..'
