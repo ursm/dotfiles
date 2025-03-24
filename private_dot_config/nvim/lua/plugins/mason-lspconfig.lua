@@ -13,7 +13,6 @@ return {
     require('mason-lspconfig').setup {
       ensure_installed = {
         'ansiblels',
-        'autotools_ls',
         'bashls',
         'clangd',
         'css_variables',
