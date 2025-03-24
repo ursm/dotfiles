@@ -6,11 +6,19 @@ shell = 'zsh'
 github = 'mollifier/anyframe'
 
 [plugins.fzf]
+{{- if eq .chezmoi.os "darwin" }}
+local = '/opt/homebrew/opt/fzf/shell'
+{{- else }}
 local = '/usr/share/fzf'
+{{- end }}
 use = ['key-bindings.zsh']
 
 [plugins._heroku]
+{{- if eq .chezmoi.os "darwin" }}
+local = '~/Library/Caches/heroku'
+{{- else }}
 local = '~/.cache/heroku'
+{{- end }}
 use = ['autocomplete/zsh_setup']
 
 [plugins.ohmyzsh]
