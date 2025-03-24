@@ -1,5 +1,4 @@
 [tools]
 node = "lts"
-deno = "latest"
 usage = "latest"
 ruby = "3.4.2"
