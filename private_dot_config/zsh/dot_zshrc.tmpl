@@ -22,7 +22,6 @@ autoload -Uz zmv
 
 PROMPT=${PROMPT:s/%(!.#.$)/$prompt_newline%(!.#.$)} # break a line before the prompt symbol ($, #)
 
-export CHEZMOI_SOURCE_DIR=$HOME/Repositories/github.com/ursm/dotfiles
 export EDITOR=nvim
 export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
 {{- if ne .chezmoi.os "darwin" }}
