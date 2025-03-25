@@ -52,6 +52,7 @@ return {
         'scss',
         'sparql',
         'sql',
+        'tera',
         'toml',
         'tsv',
         'tsx',
