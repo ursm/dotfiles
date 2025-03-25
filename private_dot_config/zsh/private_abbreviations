@@ -1,6 +1,7 @@
 abbr "be"="bundle exec"
 abbr "bo"="bundle open"
 abbr "cdg"="cd \"\$(git rev-parse --show-toplevel)\""
+abbr "cz"="chezmoi"
 abbr "d"="docker"
 abbr "dc"="docker compose"
 abbr "dcr"="docker compose run"
