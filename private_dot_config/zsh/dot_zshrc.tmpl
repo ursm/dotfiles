@@ -33,10 +33,13 @@ export RUBY_CFLAGS='-march=native'
 export UNZIP='-O cp932'
 {{- end }}
 
-zstyle ':anyframe:selector:' use fzf
-zstyle ':anyframe:selector:fzf:' command 'fzf --exact --delimiter / --with-nth -3..'
-
-bindkey '^b' anyframe-widget-insert-git-branch
-bindkey '^g' anyframe-widget-cd-ghq-repository
-
 hash -d github=$HOME/Repositories/github.com
+
+function fzf-ghq-cd() {
+  local repo=$(ghq list | fzf)
+  [ -n "$repo" ] && cd "$(ghq root)/$repo"
+}
+
+zle -N fzf-ghq-cd
+
+bindkey '^g' fzf-ghq-cd
