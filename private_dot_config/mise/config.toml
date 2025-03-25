@@ -1,4 +1,5 @@
 [tools]
 node = "lts"
-usage = "latest"
 ruby = "3.4.2"
+rust = "latest"
+usage = "latest"
