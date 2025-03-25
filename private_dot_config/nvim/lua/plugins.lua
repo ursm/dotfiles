@@ -5,15 +5,16 @@ return {
       use_default_keymaps = true
     }
   },
-  'andreshazard/vim-freemarker',
-  'andymass/vim-matchup',
   {
-    'deris/columnjump',
-    config = function()
-      vim.keymap.set('n', '<Space>k', '<Plug>(columnjump-backward)')
-      vim.keymap.set('n', '<Space>j', '<Plug>(columnjump-forward)')
+    'alker0/chezmoi.vim',
+    lazy = false,
+    init = function()
+      vim.g['chezmoi#use_tmp_buffer']  = true
+      vim.g['chezmoi#source_dir_path'] = vim.env.HOME .. '/Repositories/github.com/ursm/dotfiles'
     end
   },
+  'andreshazard/vim-freemarker',
+  'andymass/vim-matchup',
   'dhruvasagar/vim-table-mode',
   'editorconfig/editorconfig-vim',
   {
