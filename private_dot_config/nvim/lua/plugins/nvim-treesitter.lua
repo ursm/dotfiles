@@ -39,6 +39,7 @@ return {
         'json',
         'json5',
         'jsonc',
+        'kdl',
         'lua',
         'make',
         'markdown',

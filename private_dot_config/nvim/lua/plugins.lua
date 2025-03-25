@@ -29,7 +29,6 @@ return {
       vim.fn['mkdp#util#install']()
     end
   },
-  'imsnif/kdl.vim',
   'jghauser/mkdir.nvim',
   {
     'junegunn/vim-easy-align',
