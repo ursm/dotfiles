@@ -22,16 +22,17 @@ autoload -Uz zmv
 
 PROMPT=${PROMPT:s/%(!.#.$)/$prompt_newline%(!.#.$)} # break a line before the prompt symbol ($, #)
 
+{{ if eq .chezmoi.os "darwin" -}}
 export EDITOR=nvim
+{{ end -}}
 export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
-{{- if ne .chezmoi.os "darwin" }}
+{{ if ne .chezmoi.os "darwin" -}}
 export PGUSER=postgres
-{{- end }}
-export RCRC=$XDG_CONFIG_HOME/rcm/rcrc
+{{ end -}}
 export RUBY_CFLAGS='-march=native'
-{{- if eq .chezmoi.os "linux" }}
+{{ if eq .chezmoi.os "linux" -}}
 export UNZIP='-O cp932'
-{{- end }}
+{{ end -}}
 
 hash -d github=$HOME/Repositories/github.com
 
@@ -43,3 +44,7 @@ function fzf-ghq-cd() {
 zle -N fzf-ghq-cd
 
 bindkey '^g' fzf-ghq-cd
+
+{{ if eq .chezmoi.os "darwin" -}}
+alias vi=nvim
+{{ end -}}
