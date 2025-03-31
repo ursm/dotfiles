@@ -16,12 +16,15 @@ vim.opt.number        = true
 vim.opt.tabstop       = 4
 vim.opt.wildmode      = {'longest:full', 'full'}
 
-vim.keymap.set('n', '<Space>h', ':nohlsearch<CR>')
-vim.keymap.set('n', '<Space>p', '"0p');
-vim.keymap.set('n', '<Space>P', '"0P');
-vim.keymap.set('n', '<Space>%', ':let @+ = expand("%")<CR>')
-vim.keymap.set('n', '<M-j>',    ':<C-u>cnext<CR>')
-vim.keymap.set('n', '<M-k>',    ':<C-u>cprevious<CR>')
+vim.keymap.set('n', '<M-Left>',  ':<C-u>tabprevious<CR>')
+vim.keymap.set('n', '<M-Right>', ':<C-u>tabnext<CR>')
+vim.keymap.set('n', '<M-j>',     ':<C-u>cnext<CR>')
+vim.keymap.set('n', '<M-k>',     ':<C-u>cprevious<CR>')
+vim.keymap.set('n', '<M-t>',     ':<C-u>tabnew<CR>')
+vim.keymap.set('n', '<Space>%',  ':let @+ = expand("%")<CR>')
+vim.keymap.set('n', '<Space>P',  '"0P');
+vim.keymap.set('n', '<Space>h',  ':nohlsearch<CR>')
+vim.keymap.set('n', '<Space>p',  '"0p');
 
 vim.keymap.set('c', '<C-a>', '<Home>')
 vim.keymap.set('c', '<C-x>', "<C-r>=expand('%:p:h')<CR>/")
