@@ -38,7 +38,11 @@ hash -d github=$HOME/Repositories/github.com
 
 function fzf-ghq-cd() {
   local repo=$(ghq list | fzf)
-  [ -n "$repo" ] && cd "$(ghq root)/$repo"
+
+  if [[ -n "$repo" ]]; then
+    cd "$(ghq root)/$repo"
+    zle reset-prompt
+  fi
 }
 
 zle -N fzf-ghq-cd
