@@ -1,6 +1,6 @@
 [tools]
 node = "lts"
-ruby = "3.4.3"
+ruby = "3.4.4"
 rust = "latest"
 usage = "latest"
 
