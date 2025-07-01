@@ -42,7 +42,10 @@ return {
   {
     'greggh/claude-code.nvim',
     dependencies = 'nvim-lua/plenary.nvim',
-    opts = {}
+    opts = {},
+    config = function()
+      vim.keymap.set('n', '<Leader>cc', '<Cmd>ClaudeCode<CR>')
+    end
   },
   'jghauser/mkdir.nvim',
   {

@@ -53,7 +53,7 @@ return {
 
     local lspconfig = require('lspconfig')
 
-    require('mason-lspconfig').setup_handlers {
+    require('mason-lspconfig').setup {
       function(server)
         if server == 'denols' then
           lspconfig.denols.setup(vim.tbl_extend('force', opt, {
