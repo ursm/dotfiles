@@ -45,3 +45,13 @@ vim.api.nvim_create_autocmd('QuickFixCmdPost', {
     end
   end
 })
+
+vim.filetype.add({
+  extension = {
+    jb = 'ruby'
+  },
+
+  filename = {
+    ['Thorfile'] = 'ruby'
+  }
+})
