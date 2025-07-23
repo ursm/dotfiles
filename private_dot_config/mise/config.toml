@@ -1,6 +1,7 @@
 [tools]
+flyctl = "latest"
 node = "lts"
-ruby = "3.4.4"
+ruby = "3.4.5"
 rust = "latest"
 usage = "latest"
 
