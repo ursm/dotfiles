@@ -29,7 +29,7 @@ export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
 {{ if ne .chezmoi.os "darwin" -}}
 export PGUSER=postgres
 {{ end -}}
-export RUBY_CFLAGS='-march=native'
+export RUBY_CFLAGS='-Og -march=native -flto=auto -fno-fat-lto-objects -fno-plt -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing'
 {{ if eq .chezmoi.os "linux" -}}
 export UNZIP='-O cp932'
 {{ end -}}
@@ -48,7 +48,7 @@ function fzf-ghq-cd() {
 zle -N fzf-ghq-cd
 
 bindkey '^g' fzf-ghq-cd
-
 {{ if eq .chezmoi.os "darwin" -}}
+
 alias vi=nvim
 {{ end -}}

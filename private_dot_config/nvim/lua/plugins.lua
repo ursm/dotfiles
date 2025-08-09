@@ -1,15 +1,5 @@
 return {
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "github/copilot.vim" },
-      { "nvim-lua/plenary.nvim", branch = "master" },
-    },
-    build = "make tiktoken",
-    opts = {
-    }
-  },
-  {
     'Wansmer/treesj',
     opts = {
       use_default_keymaps = true
@@ -37,14 +27,6 @@ return {
     'iamcco/markdown-preview.nvim',
     build = function()
       vim.fn['mkdp#util#install']()
-    end
-  },
-  {
-    'greggh/claude-code.nvim',
-    dependencies = 'nvim-lua/plenary.nvim',
-    opts = {},
-    config = function()
-      vim.keymap.set('n', '<Leader>cc', '<Cmd>ClaudeCode<CR>')
     end
   },
   'jghauser/mkdir.nvim',
