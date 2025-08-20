@@ -1,5 +1,7 @@
 [tools]
+cloudflared = "latest"
 flyctl = "latest"
+heroku = "latest"
 node = "lts"
 ruby = "3.4.5"
 rust = "latest"
