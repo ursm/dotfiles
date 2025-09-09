@@ -5,8 +5,7 @@ return {
     {
       'williamboman/mason.nvim',
       opts = {}
-    },
-    'hrsh7th/cmp-nvim-lsp',
+    }
   },
 
   config = function()
