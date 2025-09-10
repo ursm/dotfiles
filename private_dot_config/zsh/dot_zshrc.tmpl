@@ -1,5 +1,7 @@
 bindkey -e
 
+[[ -z ${(M)path:#$XDG_BIN_HOME} ]] && path=($XDG_BIN_HOME $path)
+
 HISTFILE=$XDG_DATA_HOME/zsh/history
 fpath+=($XDG_DATA_HOME/zsh/functions)
 

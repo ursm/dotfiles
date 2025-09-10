@@ -1,3 +1,5 @@
 {{- if eq .chezmoi.os "darwin" }}
 eval "$(/opt/homebrew/bin/brew shellenv)"
 {{- end }}
+
+[[ -z ${(M)path:#$XDG_BIN_HOME} ]] && path=($XDG_BIN_HOME $path)
