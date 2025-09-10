@@ -44,13 +44,8 @@ return {
       }
     }
 
-    local opt = {
-      capabilities = require('cmp_nvim_lsp').default_capabilities(
-        vim.lsp.protocol.make_client_capabilities()
-      )
-    }
-
     local lspconfig = require('lspconfig')
+    local opt = {}
 
     require('mason-lspconfig').setup {
       function(server)
