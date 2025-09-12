@@ -1,18 +1,6 @@
 return {
   'neovim/nvim-lspconfig',
   config = function()
-    local lspconfig = require('lspconfig')
-
-    lspconfig.ruby_lsp.setup({
-      init_options = {
-        addonSettings = {
-          ['Ruby LSP Rails'] = {
-            enablePendingMigrationsPrompt = false
-          }
-        }
-      }
-    })
-
     vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
     vim.keymap.set('n', '[d',       vim.diagnostic.goto_prev)
     vim.keymap.set('n', ']d',       vim.diagnostic.goto_next)

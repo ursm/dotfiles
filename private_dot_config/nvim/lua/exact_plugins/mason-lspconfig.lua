@@ -9,6 +9,37 @@ return {
   },
 
   config = function()
+    local lspconfig = require('lspconfig')
+
+    vim.lsp.config('ruby_lsp', {
+      init_options = {
+        addonSettings = {
+          ['Ruby LSP Rails'] = {
+            enablePendingMigrationsPrompt = false
+          }
+        }
+      }
+    })
+
+    vim.lsp.config('denols', {
+      root_dir = lspconfig.util.root_pattern('deno.json', 'deno.jsonc')
+    })
+
+    vim.lsp.config('tsserver', {
+      root_dir            = lspconfig.util.root_pattern('package.json'),
+      single_file_support = false
+    })
+
+    vim.lsp.config('lua_ls', {
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = {'vim'}
+          }
+        }
+      }
+    })
+
     require('mason-lspconfig').setup {
       ensure_installed = {
         'ansiblels',
@@ -44,34 +75,6 @@ return {
       }
     }
 
-    local lspconfig = require('lspconfig')
-    local opt = {}
-
-    require('mason-lspconfig').setup {
-      function(server)
-        if server == 'denols' then
-          lspconfig.denols.setup(vim.tbl_extend('force', opt, {
-            root_dir = lspconfig.util.root_pattern('deno.json', 'deno.jsonc')
-          }))
-        elseif server == 'lua_ls' then
-          lspconfig.lua_ls.setup(vim.tbl_extend('force', opt, {
-            settings = {
-              Lua = {
-                diagnostics = {
-                  globals = {'vim'}
-                }
-              }
-            }
-          }))
-        elseif server == 'tsserver' then
-          lspconfig.tsserver.setup(vim.tbl_extend('force', opt, {
-            root_dir = lspconfig.util.root_pattern('package.json'),
-            single_file_support = false
-          }))
-        else
-          lspconfig[server].setup(opt)
-        end
-      end
-    }
+    require('mason-lspconfig').setup()
   end
 }
