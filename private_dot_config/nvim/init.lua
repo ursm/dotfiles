@@ -49,7 +49,8 @@ vim.api.nvim_create_autocmd('QuickFixCmdPost', {
 vim.filetype.add({
   extension = {
     axlsx = 'ruby',
-    jb    = 'ruby'
+    jb    = 'ruby',
+    jsonl = 'json'
   },
 
   filename = {
