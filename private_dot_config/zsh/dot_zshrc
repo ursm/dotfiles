@@ -36,9 +36,9 @@ case $OSTYPE in
   linux*)
     export PGUSER=postgres
     export UNZIP='-O cp932'
-    ;;
+  ;;
   darwin*)
     export EDITOR=nvim
     alias vi=nvim
-    ;;
+  ;;
 esac

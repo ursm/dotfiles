@@ -32,7 +32,7 @@ vim.keymap.set('c', '<C-x>', "<C-r>=expand('%:p:h')<CR>/")
 vim.keymap.set('x', '<Space>s', ':sort<CR>')
 
 if vim.fn.executable('rg') == 1 then
-  vim.o.grepprg    = 'rg --vimgrep --hidden'
+  vim.o.grepprg    = 'rg --vimgrep'
   vim.o.grepformat = '%f:%l:%c:%m'
 end
 
