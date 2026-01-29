@@ -2,7 +2,7 @@
 cloudflared = "latest"
 flyctl = "latest"
 node = "lts"
-ruby = "4.0.0"
+ruby = "4.0.1"
 rust = "latest"
 usage = "latest"
 

@@ -124,6 +124,16 @@ return {
   'tpope/vim-sleuth',
   'tpope/vim-unimpaired',
   'varnishcache-friends/vim-varnish',
+  {
+    'vim-test/vim-test',
+    config = function()
+      vim.keymap.set('n', '<Space>tn', ':TestNearest<CR>')
+      vim.keymap.set('n', '<Space>tf', ':TestFile<CR>')
+      vim.keymap.set('n', '<Space>ts', ':TestSuite<CR>')
+      vim.keymap.set('n', '<Space>tl', ':TestLast<CR>')
+      vim.keymap.set('n', '<Space>tv', ':TestVisit<CR>')
+    end
+  },
   'windwp/nvim-ts-autotag',
   'wsdjeg/vim-fetch'
 }
