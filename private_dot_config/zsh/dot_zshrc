@@ -15,7 +15,6 @@ autoload -Uz zmv
 PROMPT=${PROMPT:s/%(!.#.$)/$prompt_newline%(!.#.$)} # break a line before the prompt symbol ($, #)
 
 export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
-export RUBY_CFLAGS='-Og -march=native -flto=auto -fno-fat-lto-objects -fno-plt -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing'
 
 hash -d github=$HOME/Repositories/github.com
 
@@ -36,9 +35,11 @@ case $OSTYPE in
   linux*)
     export PGUSER=postgres
     export UNZIP='-O cp932'
+    export RUBY_CFLAGS='-Og -march=native -flto=auto -fno-fat-lto-objects -fno-plt -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing'
   ;;
   darwin*)
     export EDITOR=nvim
+    export RUBY_CFLAGS='-Og -march=native'
     alias vi=nvim
   ;;
 esac
