@@ -16,7 +16,7 @@ PROMPT=${PROMPT:s/%(!.#.$)/$prompt_newline%(!.#.$)} # break a line before the pr
 
 export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
 
-hash -d github=$HOME/Repositories/github.com
+hash -d github=$HOME/Code/github.com
 
 function fzf-ghq-cd() {
   local repo=$(ghq list | fzf)

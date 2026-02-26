@@ -37,12 +37,13 @@
 [diff]
 	algorithm = histogram
 	colorMoved = dimmed-zebra
+	submodule = log
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
 [ghq]
-	root = ~/Repositories
+	root = ~/Code
 [github]
 	user = ursm
 [gpg]
@@ -71,3 +72,7 @@
 	name = Keita Urashima
 	email = ursm@ursm.jp
 	signingkey = 539F504B4391D40EA2B5F13FE93E424FE967BA8C
+[submodule]
+	recurse = true
+[status]
+	submoduleSummary = true
