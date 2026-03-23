@@ -3,7 +3,6 @@
 *~
 .DS_Store
 ._*
-.claude/settings.local.json
 .env
 .env.sentry-build-plugin
 .envrc
@@ -16,3 +15,5 @@
 compose.override.yaml
 npm-debug.log
 yarn-error.log
+
+**/.claude/settings.local.json

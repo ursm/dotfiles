@@ -1,10 +1,14 @@
 [tools]
-cloudflared = "latest"
 flyctl = "latest"
+gcloud = "latest"
 node = "lts"
-ruby = "4.0.1"
+ruby = "4.0.2"
 rust = "latest"
+sentry = "latest"
 usage = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby", "node"]
+
+[settings.ruby]
+compile = true
