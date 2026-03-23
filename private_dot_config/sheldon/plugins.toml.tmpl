@@ -2,14 +2,6 @@ shell = 'zsh'
 
 [plugins]
 
-[plugins.fzf]
-{{- if eq .chezmoi.os "darwin" }}
-local = '/opt/homebrew/opt/fzf/shell'
-{{- else }}
-local = '/usr/share/fzf'
-{{- end }}
-use = ['key-bindings.zsh']
-
 [plugins._heroku]
 {{- if eq .chezmoi.os "darwin" }}
 local = '~/Library/Caches/heroku'
