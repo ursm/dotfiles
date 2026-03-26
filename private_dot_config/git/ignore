@@ -16,4 +16,5 @@ compose.override.yaml
 npm-debug.log
 yarn-error.log
 
-**/.claude/settings.local.json
+.claude/**
+!.claude/settings.json

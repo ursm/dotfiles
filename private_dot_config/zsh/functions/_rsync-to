@@ -1,0 +1,5 @@
+#compdef rsync-to
+
+_arguments \
+  '1:host:_ssh_hosts' \
+  '*:path:_files'
