@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ $# -lt 2 ]]; then
+  echo "Usage: rsync-from HOST PATH [PATH...]" >&2
+  exit 1
+fi
+
+host=$1; shift
+
+for path in "$@"; do
+  abs=$(realpath "$path")
+  rsync -avz "${host}:${abs}" "$(dirname "$abs")/"
+done
