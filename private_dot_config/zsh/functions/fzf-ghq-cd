@@ -1,0 +1,8 @@
+local repo=$(ghq list | fzf)
+
+if [[ -n "$repo" ]]; then
+  cd "$(ghq root)/$repo"
+  gentoo_precmd
+fi
+
+zle reset-prompt
