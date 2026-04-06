@@ -1,28 +1,37 @@
+# Options
 bindkey -e
+setopt extended_glob
 
+# Paths
 [[ -z ${(M)path:#$XDG_BIN_HOME} ]] && path=($XDG_BIN_HOME $path)
-
 HISTFILE=$XDG_DATA_HOME/zsh/history
 fpath+=($XDG_CONFIG_HOME/zsh/functions)
 
+# Plugins
 eval "$(sheldon source)"
 eval "$(mise activate zsh)"
 eval "$(atuin init zsh --disable-up-arrow)"
 
+# Autoload
 autoload -Uz compinit && compinit
 autoload -Uz promptinit && promptinit
 autoload -Uz zmv
+autoload -Uz fzf-ghq-cd
+autoload -Uz fzf-portage
+autoload -Uz mkcd
 
+# Prompt
 PROMPT=${PROMPT:s/%(!.#.$)/$prompt_newline%(!.#.$)} # break a line before the prompt symbol ($, #)
 
-export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
-
-autoload -Uz fzf-ghq-cd
+# Key bindings
 zle -N fzf-ghq-cd
 bindkey '^g' fzf-ghq-cd
 
+# Environment
+export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
 hash -d github=$HOME/Code/github.com
 
+# OS-specific
 case $OSTYPE in
   linux*)
     export PGUSER=postgres
@@ -30,8 +39,9 @@ case $OSTYPE in
     export RUBY_CFLAGS='-Og -march=native -flto=auto -fno-fat-lto-objects -fno-plt -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing'
   ;;
   darwin*)
+    alias vi=nvim
+
     export EDITOR=nvim
     export RUBY_CFLAGS='-Og -march=native'
-    alias vi=nvim
   ;;
 esac

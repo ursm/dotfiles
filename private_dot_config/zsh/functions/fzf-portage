@@ -1,0 +1,6 @@
+local base=/var/db/repos
+local dir=$(find $base -mindepth 1 -name .git -prune -o -type d -print | sed "s|^${base}/||" | sort | fzf --no-sort --exact)
+
+if [[ -n "$dir" ]]; then
+  vi "${base}/${dir}"
+fi
