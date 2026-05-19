@@ -1,8 +1,9 @@
 [tools]
 flyctl = "latest"
 gcloud = "latest"
+glab = { version = "latest", exe = "glab" }
 node = "lts"
-ruby = "4.0.2"
+ruby = "4.0.4"
 rust = "latest"
 sentry = "latest"
 usage = "latest"

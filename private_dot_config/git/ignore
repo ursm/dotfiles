@@ -8,9 +8,11 @@
 .envrc
 .foreman
 .gradle
+.memsearch/
 .mise.toml
 .netlify/
 .netrwhist
+.playwright-mcp/
 .vscode/
 compose.override.yaml
 npm-debug.log

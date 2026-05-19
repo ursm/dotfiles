@@ -8,13 +8,15 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup 'plugins'
 
-vim.opt.breakindent   = true
-vim.opt.cursorline    = true
-vim.opt.fileencodings = {'ucs-boms', 'utf-8', 'cp932', 'euc-jp'}
-vim.opt.list          = true
-vim.opt.number        = true
-vim.opt.tabstop       = 4
-vim.opt.wildmode      = {'longest:full', 'full'}
+vim.opt.breakindent    = true
+vim.opt.cursorline     = true
+vim.opt.fileencodings  = {'ucs-boms', 'utf-8', 'cp932', 'euc-jp'}
+vim.opt.foldlevel      = 99
+vim.opt.foldlevelstart = 99
+vim.opt.list           = true
+vim.opt.number         = true
+vim.opt.tabstop        = 4
+vim.opt.wildmode       = {'longest:full', 'full'}
 
 vim.keymap.set('n', '<M-Left>',  ':<C-u>tabprevious<CR>')
 vim.keymap.set('n', '<M-Right>', ':<C-u>tabnext<CR>')
