@@ -32,16 +32,6 @@ export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
 hash -d github=$HOME/Code/github.com
 
 # OS-specific
-case $OSTYPE in
-  linux*)
-    export PGUSER=postgres
-    export UNZIP='-O cp932'
-    export RUBY_CFLAGS='-Og -march=native -flto=auto -fno-fat-lto-objects -fno-plt -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing'
-  ;;
-  darwin*)
-    alias vi=nvim
-
-    export EDITOR=nvim
-    export RUBY_CFLAGS='-Og -march=native'
-  ;;
-esac
+export PGUSER=postgres
+export UNZIP='-O cp932'
+export RUBY_CFLAGS='-Og -march=native -flto=auto -fno-fat-lto-objects -fno-plt -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing'

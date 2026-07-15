@@ -23,11 +23,7 @@
 [core]
 	quotepath = off
 [credential]
-{{- if eq .chezmoi.os "darwin" }}
-	helper = osxkeychain
-{{- else }}
 	helper = libsecret
-{{- end }}
 [credential "https://github.com"]
 	helper =
 	helper = !gh auth git-credential
@@ -63,8 +59,6 @@
 	show = diff-highlight | less
 [pull]
 	rebase = true
-[push]
-	default = tracking
 [rebase]
 	autoStash = true
 	autoSquash = true

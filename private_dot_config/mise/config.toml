@@ -1,12 +1,22 @@
+[tool_alias]
+logcli = "github:grafana/loki"
+
 [tools]
-flyctl = "latest"
-gcloud = "latest"
-glab = { version = "latest", exe = "glab" }
 node = "lts"
-ruby = "4.0.4"
+ruby = "4.0.6"
 rust = "latest"
-sentry = "latest"
 usage = "latest"
+
+"github:ankitpokhrel/jira-cli" = "latest"
+"github:k1LoW/mo" = "latest"
+"github:rbspy/rbspy" = { version = "latest", rename_exe = "rbspy" }
+"github:superfly/flyctl" = { version = "latest", rename_exe = "fly" }
+"logcli" = { version = "latest", rename_exe = "logcli", asset_pattern = "logcli-linux-amd64.zip" }
+"npm:confluence-cli" = "latest"
+"npm:ntn" = "latest"
+"npm:pnpm" = "latest"
+"npm:sentry" = "latest"
+"npm:typescript-language-server" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby", "node"]

@@ -3,11 +3,7 @@ shell = 'zsh'
 [plugins]
 
 [plugins._heroku]
-{{- if eq .chezmoi.os "darwin" }}
-local = '~/Library/Caches/heroku'
-{{- else }}
 local = '~/.cache/heroku'
-{{- end }}
 use = ['autocomplete/zsh_setup']
 
 [plugins.ohmyzsh]
