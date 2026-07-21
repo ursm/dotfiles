@@ -1,1 +1,4 @@
 GOAMD64=v4
+GOBIN=/home/ursm/.local/bin
+GOMODCACHE=/home/ursm/.cache/go/mod
+GOPATH=/home/ursm/.local/share/go
