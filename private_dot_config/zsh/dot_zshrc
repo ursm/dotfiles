@@ -27,11 +27,13 @@ PROMPT=${PROMPT:s/%(!.#.$)/$prompt_newline%(!.#.$)} # break a line before the pr
 zle -N fzf-ghq-cd
 bindkey '^g' fzf-ghq-cd
 
-# Environment
+# Variables
+export LC_TIME=en_DK.UTF-8
 export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
-hash -d github=$HOME/Code/github.com
-
-# OS-specific
 export PGUSER=postgres
-export UNZIP='-O cp932'
 export RUBY_CFLAGS='-Og -march=native -flto=auto -fno-fat-lto-objects -fno-plt -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing'
+export TIME_STYLE=long-iso
+export UNZIP='-O cp932'
+
+# Misc
+hash -d github=$HOME/Code/github.com
