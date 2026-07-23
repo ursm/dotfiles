@@ -28,11 +28,9 @@ zle -N fzf-ghq-cd
 bindkey '^g' fzf-ghq-cd
 
 # Variables
-export LC_TIME=en_DK.UTF-8
 export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
 export PGUSER=postgres
 export RUBY_CFLAGS='-Og -march=native -flto=auto -fno-fat-lto-objects -fno-plt -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing'
-export TIME_STYLE=long-iso
 export UNZIP='-O cp932'
 
 # Misc
