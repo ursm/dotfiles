@@ -13,6 +13,7 @@ usage = "latest"
 "github:superfly/flyctl" = { version = "latest", rename_exe = "fly" }
 "logcli" = { version = "latest", rename_exe = "logcli", asset_pattern = "logcli-linux-amd64.zip" }
 "npm:confluence-cli" = "latest"
+"npm:heroku" = "latest"
 "npm:ntn" = "latest"
 "npm:pnpm" = "latest"
 "npm:sentry" = "latest"

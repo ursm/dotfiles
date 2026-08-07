@@ -70,3 +70,5 @@
 	recurse = true
 [status]
 	submoduleSummary = true
+[credential "https://git.heroku.com"]
+	helper = !heroku git:credentials
