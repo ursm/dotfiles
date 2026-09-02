@@ -1,6 +1,8 @@
 # Options
 bindkey -e
 setopt extended_glob
+setopt sh_word_split
+unsetopt equals
 
 # Paths
 [[ -z ${(M)path:#$XDG_BIN_HOME} ]] && path=($XDG_BIN_HOME $path)
@@ -30,6 +32,7 @@ bindkey '^g' fzf-ghq-cd
 # Variables
 export LESS="$LESS --quit-if-one-screen --RAW-CONTROL-CHARS"
 export PGUSER=postgres
+export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/ripgreprc
 export RUBY_CFLAGS='-Og -march=native -flto=auto -fno-fat-lto-objects -fno-plt -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing'
 export UNZIP='-O cp932'
 
