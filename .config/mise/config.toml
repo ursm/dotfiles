@@ -24,3 +24,8 @@ idiomatic_version_file_enable_tools = ["ruby", "node"]
 
 [settings.ruby]
 compile = true
+
+[dotfiles."~"]
+source =  "~/Code/github.com/ursm/dotfiles"
+mode = "symlink-each"
+manifest = "git"
