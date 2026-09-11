@@ -15,7 +15,7 @@ usage = "latest"
 "npm:confluence-cli" = "latest"
 "npm:heroku" = "latest"
 "npm:ntn" = "latest"
-"npm:pnpm" = "latest"
+"npm:pnpm" = "11"
 "npm:sentry" = "latest"
 "npm:typescript-language-server" = "latest"
 
