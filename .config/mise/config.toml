@@ -1,6 +1,8 @@
 [tools]
 claude-code = "latest"
+flyctl = "latest"
 node = "lts"
+pnpm = "11"
 ruby = "4.0.6"
 rust = "latest"
 usage = "latest"
@@ -8,11 +10,9 @@ usage = "latest"
 "github:ankitpokhrel/jira-cli" = "latest"
 "github:k1LoW/mo" = "latest"
 "github:rbspy/rbspy" = { version = "latest", rename_exe = "rbspy" }
-"github:superfly/flyctl" = { version = "latest", postinstall = 'ln -sf flyctl "$MISE_TOOL_INSTALL_PATH/fly"' }
 "npm:confluence-cli" = "latest"
 "npm:heroku" = "latest"
 "npm:ntn" = "latest"
-"npm:pnpm" = "11"
 "npm:sentry" = "latest"
 "npm:typescript-language-server" = "latest"
 
