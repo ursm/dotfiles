@@ -1,6 +1,3 @@
-[tool_alias]
-logcli = "github:grafana/loki"
-
 [tools]
 claude-code = "latest"
 node = "lts"
@@ -12,7 +9,6 @@ usage = "latest"
 "github:k1LoW/mo" = "latest"
 "github:rbspy/rbspy" = { version = "latest", rename_exe = "rbspy" }
 "github:superfly/flyctl" = { version = "latest", postinstall = 'ln -sf flyctl "$MISE_TOOL_INSTALL_PATH/fly"' }
-"logcli" = { version = "latest", rename_exe = "logcli", asset_pattern = "logcli-linux-amd64.zip" }
 "npm:confluence-cli" = "latest"
 "npm:heroku" = "latest"
 "npm:ntn" = "latest"
