@@ -1,5 +1,5 @@
 [tools]
-claude-code = "latest"
+claude = "latest"
 flyctl = "latest"
 node = "lts"
 pnpm = "11"
